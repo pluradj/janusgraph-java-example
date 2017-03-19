@@ -19,4 +19,5 @@ mvn exec:java -Dexec.mainClass="pluradj.janusgraph.example.JavaExample"
 
 * [JanusGraph Getting Started](http://docs.janusgraph.org/0.1.0-SNAPSHOT/getting-started.html)
 * [JanusGraph Snapshot Distribution](https://oss.sonatype.org/content/repositories/snapshots/org/janusgraph/janusgraph-dist/0.1.0-SNAPSHOT/)
+* [GraphOfTheGodsFactory.java](https://github.com/JanusGraph/janusgraph/blob/master/janusgraph-core/src/main/java/org/janusgraph/example/GraphOfTheGodsFactory.java)
 * [Apache TinkerPop 3.2.3 Javadocs](http://tinkerpop.apache.org/javadocs/3.2.3/full/)
