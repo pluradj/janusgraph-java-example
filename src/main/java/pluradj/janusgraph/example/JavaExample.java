@@ -17,8 +17,11 @@ public class JavaExample {
 
     public static void main(String[] args) {
         JanusGraph graph = JanusGraphFactory.open("conf/janusgraph-berkeleyje-lucene.properties");
-        GraphOfTheGodsFactory.load(graph);
         GraphTraversalSource g = graph.traversal();
+        if (g.V().count().next() == 0) {
+            // load the schema and graph data
+            GraphOfTheGodsFactory.load(graph);
+        }
         Map saturnProps = g.V().has("name", "saturn").valueMap(true).next(); 
         LOGGER.info(saturnProps.toString());
         List places = g.E().has("place", Geo.geoWithin(Geoshape.circle(37.97, 23.72, 50))).toList();
