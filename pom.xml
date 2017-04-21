@@ -14,7 +14,7 @@
     </licenses>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <janusgraph.version>0.1.0-SNAPSHOT</janusgraph.version>
+        <janusgraph.version>0.1.0</janusgraph.version>
         <slf4j.version>1.7.21</slf4j.version>
     </properties>
     <dependencies>
@@ -45,12 +45,6 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-    <repositories>
-        <repository>
-            <id>Sonatype-OSSRH-Snapshots</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </repository>
-    </repositories>
     <build>
         <plugins>
             <plugin>

@@ -1,6 +1,7 @@
 package pluradj.janusgraph.example;
 
 import org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversalSource;
+import org.apache.tinkerpop.gremlin.structure.Edge;
 import org.apache.tinkerpop.gremlin.structure.Vertex;
 import org.janusgraph.core.JanusGraph;
 import org.janusgraph.core.JanusGraphFactory;
@@ -22,9 +23,9 @@ public class JavaExample {
             // load the schema and graph data
             GraphOfTheGodsFactory.load(graph);
         }
-        Map saturnProps = g.V().has("name", "saturn").valueMap(true).next(); 
+        Map<String, ?> saturnProps = g.V().has("name", "saturn").valueMap(true).next();
         LOGGER.info(saturnProps.toString());
-        List places = g.E().has("place", Geo.geoWithin(Geoshape.circle(37.97, 23.72, 50))).toList();
+        List<Edge> places = g.E().has("place", Geo.geoWithin(Geoshape.circle(37.97, 23.72, 50))).toList();
         LOGGER.info(places.toString());
         System.exit(0);
     }
