@@ -14,14 +14,20 @@
     </licenses>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <janusgraph.version>0.1.0</janusgraph.version>
-        <slf4j.version>1.7.21</slf4j.version>
+        <janusgraph.version>0.3.0</janusgraph.version>
+        <tinkerpop.version>3.3.3</tinkerpop.version>
+        <slf4j.version>1.7.25</slf4j.version>
     </properties>
     <dependencies>
         <dependency>
             <groupId>org.janusgraph</groupId>
             <artifactId>janusgraph-core</artifactId>
             <version>${janusgraph.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tinkerpop</groupId>
+            <artifactId>gremlin-server</artifactId>
+            <version>${tinkerpop.version}</version>
         </dependency>
         <dependency>
             <groupId>org.janusgraph</groupId>
@@ -51,7 +57,7 @@
                 <!-- JanusGraph requires Java 8 -->
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.3</version>
+                <version>3.8.0</version>
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>

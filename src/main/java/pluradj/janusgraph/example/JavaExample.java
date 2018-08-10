@@ -23,7 +23,7 @@ public class JavaExample {
             // load the schema and graph data
             GraphOfTheGodsFactory.load(graph);
         }
-        Map<String, ?> saturnProps = g.V().has("name", "saturn").valueMap(true).next();
+        Map<Object, Object> saturnProps = g.V().has("name", "saturn").valueMap(true).next();
         LOGGER.info(saturnProps.toString());
         List<Edge> places = g.E().has("place", Geo.geoWithin(Geoshape.circle(37.97, 23.72, 50))).toList();
         LOGGER.info(places.toString());
